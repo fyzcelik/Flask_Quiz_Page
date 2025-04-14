@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartQuiz - Test</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Test Soruları</h2>
+    </header>
+    
+    <main>
+      <form method="POST" class="quiz-form">
+        {% for q in questions %}
+          <div class="question">
+            <p>{{ loop.index }}. {{ q.q }}</p>
+            <input name="q{{ loop.index0 }}" required class="input-field"><br><br>
+          </div>
+        {% endfor %}
+        <button type="submit" class="submit-btn">Testi Bitir</button>
+      </form>
+    </main>
+
+    <footer>
+      <hr>
+      <p>Hazırlayan: Feyza Çelik</p>
+    </footer>
+  </div>
+</body>
+</html>

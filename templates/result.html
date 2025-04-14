@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartQuiz - Sonuç</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>Sonuçlar</h2>
+    </header>
+    
+    <main>
+      <p>Son Skorun: <strong>{{ user.last_score }}</strong></p>
+      <p>En Yüksek Skorun: <strong>{{ user.best_score }}</strong></p>
+      <p>Tüm Kullanıcılar Arasında En Yüksek Skor: <strong>{{ top_score }}</strong></p>
+      <a href="/quiz" class="link-btn">Tekrar Dene</a> | <a href="/" class="link-btn">Anasayfa</a>
+    </main>
+
+    <footer>
+      <hr>
+      <p>Hazırlayan: Feyza Çelik</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartQuiz - Başlangıç</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>SmartQuiz'e Hoş Geldin!</h2>
+    </header>
+    
+    <main>
+      <form method="POST" class="quiz-form">
+        <input type="text" name="username" placeholder="Adınızı girin" required class="input-field">
+        <button type="submit" class="submit-btn">Teste Başla</button>
+      </form>
+    </main>
+
+    <footer>
+      <hr>
+      <p>Hazırlayan: Feyza Çelik</p>
+    </footer>
+  </div>
+</body>
+</html>
