@@ -2,32 +2,34 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartQuiz - Test</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Test Quiz - Test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light py-5">
+
   <div class="container">
-    <header>
-      <h2>Test Soruları</h2>
-    </header>
+    <div class="text-end mb-2 text-muted">
+      👋 Hoş geldin, <strong>{{ session['username'] }}</strong>
+    </div>
     
-    <main>
-      <form method="POST" class="quiz-form">
+    <div class="card shadow p-4 mx-auto" style="max-width: 700px;">
+      <h2 class="mb-4 text-center">📝 Test Soruları</h2>
+      <form method="POST">
         {% for q in questions %}
-          <div class="question">
-            <p>{{ loop.index }}. {{ q.q }}</p>
-            <input name="q{{ loop.index0 }}" required class="input-field"><br><br>
+          <div class="mb-4">
+            <label class="form-label"><strong>{{ loop.index }}. {{ q.q }}</strong></label>
+            <input type="text" name="q{{ loop.index0 }}" class="form-control" required>
           </div>
         {% endfor %}
-        <button type="submit" class="submit-btn">Testi Bitir</button>
+        <button type="submit" class="btn btn-success w-100">Testi Bitir</button>
       </form>
-    </main>
-
-    <footer>
-      <hr>
-      <p>Hazırlayan: Feyza Çelik</p>
-    </footer>
+    </div>
   </div>
+
+  <footer class="text-muted mt-5 text-center">
+    <hr>
+    <p>Hazırlayan: <strong>Feyza Çelik</strong></p>
+  </footer>
+
 </body>
 </html>

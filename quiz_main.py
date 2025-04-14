@@ -14,7 +14,7 @@ questions = [
     {"q": "Flask nedir?", "a": "Web framework"},
     {"q": "HTML’de bağlantı etiketi hangisidir?", "a": "a"},
     {"q": "Python’da liste sıralamak için hangi fonksiyon kullanılır?", "a": "sorted"},
-    {"q": "discord bot yazmak için hangi kütüphane kullanılır?", "a": "discord.py"},
+    {"q": "Discord bot yazmak için hangi kütüphane kullanılır?", "a": "discord.py"},
     {"q": "Doğal Dil İşleme kütüphanesi nedir?", "a": "nltk"},
 ]
 

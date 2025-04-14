@@ -2,27 +2,27 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartQuiz - Başlangıç</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Test Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <header>
-      <h2>SmartQuiz'e Hoş Geldin!</h2>
-    </header>
-    
-    <main>
-      <form method="POST" class="quiz-form">
-        <input type="text" name="username" placeholder="Adınızı girin" required class="input-field">
-        <button type="submit" class="submit-btn">Teste Başla</button>
-      </form>
-    </main>
+<body class="bg-light d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
 
-    <footer>
-      <hr>
-      <p>Hazırlayan: Feyza Çelik</p>
-    </footer>
+  <div class="container text-center">
+    <div class="card shadow p-4" style="max-width: 500px; margin: auto;">
+      <h2 class="mb-4">🎓 Test Quiz'e Hoş Geldin!</h2>
+      <form method="POST">
+        <div class="mb-3">
+          <input type="text" name="username" class="form-control" placeholder="Adınızı girin" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Teste Başla</button>
+      </form>
+    </div>
   </div>
+
+  <footer class="text-muted mt-5 text-center">
+    <hr>
+    <p>Hazırlayan: <strong>Feyza Çelik</strong></p>
+  </footer>
+
 </body>
 </html>
